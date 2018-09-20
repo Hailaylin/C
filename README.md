@@ -8,3 +8,4 @@ git -m commit -m '信息'
 git pull
 
 ok
+aaa
