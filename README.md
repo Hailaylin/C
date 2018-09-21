@@ -15,7 +15,7 @@ vim打开 ```~/.ssh/id_rsa.pub 复制公钥进github.com
 
 git clone git@github/你的地址.git
 
-git commit -m '信息'
+git commit -m "备注" -a
 
 git push
 
