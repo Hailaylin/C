@@ -19,6 +19,7 @@ vim打开 `~/.ssh/id_rsa.pub` 复制公钥进github.com
 
 `git push`
 
+有时commit多了可以先 `git pull` 先
 
 配置参考[廖雪峰的教程](https://www.cnblogs.com/cocowool/archive/2010/10/19/1855616.html)
 
