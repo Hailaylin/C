@@ -35,3 +35,5 @@ http://bestcbooks.com/
 [https://www.chromefor.com](https://www.chromefor.com)获取谷歌浏览器的插件
 - [https://www.chromefor.com/mega_v3-16-5/](https://www.chromefor.com/mega_v3-16-5/)mega插件
 
+# 大数据时代 (维克托·迈尔·舍恩伯格) .pdf 
+- 百度网盘
