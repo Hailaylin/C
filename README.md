@@ -106,14 +106,14 @@ vim打开 `~/.ssh/id_rsa.pub` 复制公钥进github.com
 |    remote     |                    n. 远程                     |      |
 |   recommend   |                    vt. 推荐                    |      |
 |     cheat     |               vt. 作弊 ；n. 欺骗               |      |
-|               |                                                |      |
-|               |                                                |      |
-|               |                                                |      |
-|               |                                                |      |
-|               |                                                |      |
-|               |                                                |      |
-|               |                                                |      |
-|               |                                                |      |
+|     idle      |     adj. 闲置的； vt. 虚度； vi. 无所事事      |      |
+|     range     |                    n. 范围                     |      |
+|    purpose    |                    n. 目的                     |      |
+|    adjust     |                                                |      |
+|   specific    |                                                |      |
+| verification  |                                                |      |
+|  gracefully   |                                                |      |
+| particularly  |                                                |      |
 |               |                                                |      |
 |               |                                                |      |
 |               |                                                |      |
