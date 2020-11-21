@@ -1,0 +1,3 @@
+# 忽略一些大文件
+*.exe
+\TianTiSai\ACM\

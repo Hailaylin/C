@@ -1,0 +1,74 @@
+<mxfile host="65bd71144e" modified="2020-11-11T13:19:55.380Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.0 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" etag="RIp2g2kWTWQfzXRWdUA5" version="13.6.5">
+    <diagram id="LPiP7B9nsIaZ5yOE1Gxh" name="第 1 页">
+        <mxGraphModel dx="734" dy="574" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;div id=&quot;ctl00_ContentPlaceHolder1_panPro&quot; style=&quot;font-family: &amp;quot;microsoft yahei&amp;quot;; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(255, 255, 255); width: 958px; color: rgb(0, 0, 255);&quot;&gt;用迭代法求a的平方根，迭代公式在书上141页(下图)，要求前后两次求出的x的差的绝对值小于10的-5次方。输出平方根时保留2位小数。x与a用double类型数据。&lt;br&gt;例：&lt;br&gt;（1）输入：2&amp;nbsp;输出：1.41&lt;br&gt;（2）输入：4&amp;nbsp;输出：2.00&lt;br&gt;（3）输入：2020&amp;nbsp;输出：44.94&lt;br&gt;请提交流程图。&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;img id=&quot;ctl00_ContentPlaceHolder1_Image1&quot; src=&quot;https://tu.hailay.site/question/3012/0501.jpg?temp=779&quot; style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;microsoft yahei&amp;quot;; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(255, 255, 255); border-width: 0px;&quot;&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="40" width="550" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=15;" edge="1" parent="1" source="8" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="开始" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=3;spacing=3;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=15;" edge="1" parent="1" source="11" target="13">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="输入 a" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=3;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="450" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fontSize=15;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="12" target="18">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="280" y="588" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="250" y="835"/>
+                            <mxPoint x="250" y="650"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="29" value="True" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="20">
+                    <mxGeometry x="-0.04" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="False" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=15;" edge="1" parent="1" source="12" target="28">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="960" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="fabs(x1-x2)&amp;gt;=1e-5" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=3;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="800" width="200" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=15;" edge="1" parent="1" source="13" target="18">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="x2=a" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=3;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="545" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=15;" edge="1" parent="1" source="18" target="19">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="x1=x2" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=3;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="630" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=15;" edge="1" parent="1" source="19" target="12">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="x2=(x1+a/x1)/2" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=3;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="710" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=15;" edge="1" parent="1" source="28" target="30">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="输出 x2" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=3;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="930" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="结束" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=3;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="385" y="1030" width="110" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
