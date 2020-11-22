@@ -1,5 +1,5 @@
 /*
-6班孙洪涛写的代码
+6班孙洪涛同学写的代码
 http://c.biancheng.net/view/2043.html
 */
 #include<stdio.h>
