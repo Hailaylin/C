@@ -35,6 +35,8 @@ void rand_ball(int n,int max,int array[])
     }
 }
 
+
+//qsort排序顺序
 int cmpfunc (const void * a, const void * b)
 {
    return ( *(int*)a - *(int*)b );
@@ -43,28 +45,28 @@ int cmpfunc (const void * a, const void * b)
 int main()
 {
     int n,i,j;
-    int red_ball[12],bule_ball[2];
-    scanf("%d",&n);
+    int red_ball[6],bule_ball[1];
+    scanf("%d",&n);                     //输出n组球
 
     for(j=0;j<n;j++)
     {
-        rand_ball(6,33,red_ball);
-        qsort(red_ball,6,sizeof(int),cmpfunc);
-        for(i=0;i<5;i++)
+        rand_ball(6,33,red_ball);       //生成6个不重复的随机红球
+        qsort(red_ball,6,sizeof(int),cmpfunc);//qsort排序
+        for(i=0;i<5;i++)                //输出红球
         {
             printf("%02d,",red_ball[i]);
         }
-        printf("%02d:",red_ball[i]);
-        rand_ball(1,16,bule_ball);
-        printf("%02d\n",bule_ball[0]);
+        printf("%02d:",red_ball[i]);    //输出蓝球
+        rand_ball(1,16,bule_ball);      //生产随机蓝球
+        printf("%02d\n",bule_ball[0]);  //输出蓝球
 
-        for(i=0;i<6;i++)
+        for(i=0;i<6;i++)                //数组清零
         {
             red_ball[i]=0;
         }
         bule_ball[0]=0;
 
-        Sleep(2000);
+        Sleep(2000);                    //暂停2秒，
     }
     return 0;
 }
