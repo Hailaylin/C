@@ -9,7 +9,8 @@
 				"-g",
 				"${file}",
 				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"-Lwsock32"
 			],
 			"options": {
 				"cwd": "D:\\Apps\\mingw64\\bin"

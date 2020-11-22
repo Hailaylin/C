@@ -10,7 +10,7 @@
 例：
 （1）输入：89 95 87.5 100 67.5 97 59 84 73 90 输出：max=100.00,min=59.00,average=84.20
 */
-
+/*      自己写的
 #include<stdio.h>
 
 #define N 10
@@ -52,4 +52,43 @@ int main()
     Stu(N,StuScore,output);
     printf("max=%.2f,min=%.2f,average=%.2f",output[1],output[2],output[0]);
     return 0;
+}
+*/
+//使用全局变量更方便，不用再自定义函数qaq 
+//尝试一下
+#include<stdio.h>
+
+#define N 10
+
+float Max=0,Min=0;
+
+float average(int n,float score[])
+{
+    int i;
+    float sum=0;
+    Max=Min=score[0];
+    for (i=0;i<n;i++)
+    {
+        if(Max<score[i]) Max=score[i];
+        else if(Min>score[i]) Min=score[i];
+        sum+=score[i];
+    }
+    return (sum/n);
+}
+
+void getarr(float arr[])
+{
+    int i;
+    for(i=0;i<N;i++)
+    {
+        scanf("%f",&arr[i]);
+    }
+}
+
+int main()
+{
+    float stuScore[N],aver;
+    getarr(stuScore);
+    aver=average(N,stuScore);
+    printf("max=%.2f,min=%.2f,average=%.2f",Max,Min,aver);
 }
