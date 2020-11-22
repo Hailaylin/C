@@ -11,3 +11,5 @@ PTA https://pintia.cn/problem-sets?tab=1
 ## 学习书目：
 1. 《C语言程序设计》（第五版）——谭浩强
 2. 《C程序设计语言》（第二版）——忘记谁写的了
+
+## vscode配置

@@ -23,10 +23,10 @@ void rand_ball(int n,int max,int array[])
         do
         {
             z=rand()%max+1;
-            for(j=0;j<i;j++)【
+            for(j=0;j<i;j++)
             {
                 if(array[j]==z)
-                {-0
+                {
                     break;
                 }
             }
@@ -66,7 +66,7 @@ int main()
         }
         bule_ball[0]=0;
 
-        Sleep(2000);                    //暂停2秒，
+        Sleep(2000);                    //暂停2秒
     }
     return 0;
 }

@@ -74,13 +74,13 @@ void bubbleSort(float  a[],int n)
     float temp;
     for(i=0;i<n-1;i++)
     {
-        for(j=0;i<n-i-1;i++)
+        for(j=0;j<n-i-1;j++)
         {
             if(a[j]>a[j+1]) //前一个数大于后一个数就交换
             {
-                temp=a[j];
-                a[j]=a[j+1];
-                a[j+1]=temp;
+                temp=a[j+1];
+                a[j+1]=a[j];
+                a[j]=temp;
             }
         }
     }
