@@ -5,6 +5,8 @@
             "includePath": [
                 "D:\\Apps\\arduino-1.8.7\\tools\\**",
                 "D:\\Apps\\arduino-1.8.7\\hardware\\arduino\\avr\\**",
+                "D:\\Apps\\arduino-1.8.7\\hardware\\tools\\avr\\avr\\include",
+                "D:\\Apps\\arduino-1.8.7\\libraries\\**",
                 "${workspaceFolder}/**"
             ],
             "defines": [

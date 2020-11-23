@@ -4,5 +4,6 @@
         "random": "c",
         "limits": "c",
         "valarray": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
 }
