@@ -37,7 +37,7 @@ int main()
     puts(s2);
     
 }
-
+# ????
  * 
  */
 
@@ -55,6 +55,7 @@ void extract(char s1[],char s2[])
             s2[j++]=s1[i];
         }
     }
+    s2[j]='\0';
 }
 //字符串逆序存放
 void reverse(char str[])
