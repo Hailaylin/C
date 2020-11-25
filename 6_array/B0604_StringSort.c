@@ -39,3 +39,39 @@ Sunflower
 
 */
 
+#include<stdio.h>
+#include<string.h>
+#define STR_NUM 5
+#define STR_MAX 10
+
+int main()
+{
+    char StrIn[STR_NUM][STR_MAX];
+    char SwapTemp[STR_MAX];
+    int i,j;
+
+    for(i=0;i<STR_NUM;i++)
+    {
+        scanf("%s",&StrIn[i]);
+    }
+
+    for(i=0;i<STR_NUM-1;i++)
+    {
+        for(j=0;j<STR_NUM-i-1;j++)
+        {
+            if(strcmp(StrIn[j],StrIn[j+1])>0)
+            {
+                strcpy(SwapTemp,StrIn[j]);
+                strcpy(StrIn[j],StrIn[j+1]);
+                strcpy(StrIn[j+1],SwapTemp);
+            }
+        }
+    }
+
+    printf("After sorting:\n");
+    for(i=0;i<STR_NUM;i++)
+    {
+        printf("%s\n",StrIn[i]);
+    }
+    return 0;
+}

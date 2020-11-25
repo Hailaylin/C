@@ -17,12 +17,12 @@ struct SpaceVector
 
 int main()
 {
-    struct SpaceVector sv;
+    struct SpaceVector sv,sv1;
     int n;
     double ModuleLenth;
-    printf("[INFO] 1 to ModuleLenth, 2 to Space Vector ModuleLenth,\n3 to Vertical: ");
+    printf("[INFO] 1 to ModuleLenth, 2 to Space direction,\n3 to Vertical: ");
     scanf("%d",&n);
-    scanf("%lf,%lf,%lf",&sv.a,&sv.b,&sv.c);
+    
     switch(n)
     {
         case 1:
@@ -33,14 +33,22 @@ int main()
         }
         case 2:
         {
-            if(sv.a/sv.b==sv.a/sv.c&&sv.b/sv.c==sv.a/sv.c)
+            scanf("%lf,%lf,%lf",&sv.a,&sv.b,&sv.c);
+            scanf("%lf,%lf,%lf",&sv1.a,&sv1.b,&sv1.c);
+            if((sv.a==0&&sv.b==0&&sv.c==0)||(sv1.a==0&&sv1.b==0&&sv1.c==0))
+            {
+                printf("[INFO] Space Vector has the same direction.\n");
+            }
+            else if(sv.a/sv1.a==sv.c/sv1.c&&sv.b/sv1.b==sv.c/sv1.c)
                 printf("[INFO] Space Vector has the same direction.\n");
             else printf("[INFO] Space Vector has not the same direction.\n");
             break;
         }
         case 3:
         {
-            if(sv.a+sv.b==0)
+            scanf("%lf,%lf,%lf",&sv.a,&sv.b,&sv.c);
+            scanf("%lf,%lf,%lf",&sv1.a,&sv1.b,&sv1.c);
+            if(sv.a*sv1.a+sv.b*sv1.b+sv.c*sv1.c==0)
                 printf("[INFO] Space Vector is Vertical.\n");
             else printf("[INFO] Space Vector is not Vertical.\n");
             break;

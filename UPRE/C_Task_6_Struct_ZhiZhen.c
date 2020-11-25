@@ -31,8 +31,8 @@ int main()
     swap_struct(&std1,&std2);
     
     printf("Print the second struct.\n");
-    printf("2stu1:name=%s,sex=%s,id=%s\n",std1.name,std1.sex,std1.id);
-    printf("2stu2:name=%s,sex=%s,id=%s\n",std2.name,std2.sex,std2.id);
+    printf("stu1:name=%s,sex=%s,id=%s\n",std1.name,std1.sex,std1.id);
+    printf("stu2:name=%s,sex=%s,id=%s\n",std2.name,std2.sex,std2.id);
     
     return 0;
 }
