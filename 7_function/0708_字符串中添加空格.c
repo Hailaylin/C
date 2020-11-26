@@ -30,17 +30,15 @@ int main()
 void insertspace(char str[])
 {
     int i,j,len;
-    char temp[81];             //设置缓存字符数组
+    char temp[81];              //设置缓存字符数组
     len=strlen(str);
     //printf("len=%d\n",len);
     for(i=0,j=0;i<len;i++)      //数位不对?对了
     {
         if(str[i+1]!='\0')
         {
-            temp[j]=str[i];
-            j++;
-            temp[j]=' ';
-            j++;          //在奇数位添加空格
+            temp[j++]=str[i];
+            temp[j++]=' ';      //在奇数位添加空格
         }
         else 
         {
@@ -49,7 +47,6 @@ void insertspace(char str[])
         }
     }
     temp[j]='\0';
-    //temp[j+2]='\0';
     //把temp数组给str[]
     for(i=0;temp[i]!='\0';i++)   //i<len*2 ，这里数组名写成str就会少输出一半
     {

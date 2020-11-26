@@ -166,4 +166,43 @@ B-->C
 A-->C
  */
 
+/*
 #include<stdio.h>
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+    unsigned long long time_hn;
+    time_hn=(unsigned long long)pow(2,64)-1;
+    //printf("%llu\n",time_hn);
+    cout<<time_hn<<endl;
+    return 0;
+}
+
+*/
+
+#include<stdio.h>
+int main()
+{
+    void hn(int n,char a,char b,char c);
+    int n;
+    scanf("%d",&n);
+    hn(n,'A','B','C');
+    return 0;
+}
+//移动n个盘子，从a座移到c座，借助b座
+void hn(int n,char a,char b,char c)
+{
+    if(n==1)
+    {
+        printf("%c-->%c\n",a,c);
+        return ;
+    }
+    hn(n-1,a,c,b);
+    hn(1,a,b,c);
+    hn(n-1,b,a,c);
+}
+//自己以为的思路？
+//移动n个盘子,从a->b,借助c……题目意思理解错误
+//void hn(int n,char a,char b,char c)
