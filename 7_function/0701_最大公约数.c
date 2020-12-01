@@ -39,6 +39,21 @@ int main()
  * /
 */
 #include<stdio.h>
+int gy(int m,int n); //计算最大公约数
+
+int main()
+{
+    int m,n;
+    int max,min;
+        
+    scanf("%d,%d",&m,&n);
+    max=gy(m,n);
+    min=m*n/max;
+    printf("%d,%d",max,min);
+
+    return 0;
+}
+
 int gy(int m,int n)
 {
     int c,d,r;
@@ -51,17 +66,4 @@ int gy(int m,int n)
 		m=n;
 		n=r;
 	}
-}
-int main()
-{
-    int m,n;
-    int max,min;
-    int gy(int m,int n); //计算最大公约数
-        
-    scanf("%d,%d",&m,&n);
-    max=gy(m,n);
-    min=m*n/max;
-    printf("%d,%d",max,min);
-
-    return 0;
 }
