@@ -26,21 +26,35 @@
 #define N 6
 
 //用指针交换数
-void swap(int *a, int *b){
+/*void swap(int *a, int *b){
     int tmp;
     tmp = *a;
     *a = *b;
     *b = tmp;
 }
+*/
+//指针交换数(easier way)
+void swap(int *a, int *b){
+    int tmp;
+    tmp=*a,*a=*b,*b=tmp;
+}
 
 //交换头尾数（偶次个数组元素适用）
-void inv(int *x, int n){
+/*void inv(int *x, int n){
     int i,j,m;
     m = (n-1) / 2;
     for (i=0; i<=m ;i++){    //执行n+1/2的次数，不然等于没交换
         //交换i和j=n-1-i的数
         j=n-1-i;
         swap((x+i),(x+j));
+    }
+}
+*/
+//交换头尾数（指针法）
+void inv(int *x, int n){
+    int *p,*q,tmp;
+    for(p=x,q=x+n-1;p<q;p++,q--){
+        swap(p,q);
     }
 }
 
