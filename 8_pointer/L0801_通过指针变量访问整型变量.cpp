@@ -12,9 +12,10 @@
 #include<stdio.h>
 int main()
 {
-    int a=100,b=10;     //定义a,b
+    int a,b;     //定义a,b
     int *ap,*bp;        //定义关于a和b的指针变量ap,bp
+    scanf("%d %d",&a,&b);
     ap=&a,bp=&b;
-    printf("*ap=%d,*bp=%d\n",*ap,*bp);
+    printf("a=%d,b=%d\n*pointer_1=%d,*pointer_2=%d\n",a,b,*ap,*bp);
     return 0;
 }

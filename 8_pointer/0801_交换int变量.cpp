@@ -39,10 +39,12 @@ int main()
  */
 #include<stdio.h>
 void swap(int *p1, int *p2){
-    int tmp;
-    tmp=*p1;
+    int *tmp;
+    int a=0;      //int *tmp=NULL; 输出也没有用，不会输出
+    tmp=&a;       //这种写法等价于int tmp;
+    *tmp=*p1;
     *p1=*p2;
-    *p2=tmp;
+    *p2=*tmp;
 }
 
 int main()

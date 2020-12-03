@@ -17,7 +17,7 @@
                 "_UNICODE",
                 "USBCON"
             ],
-            "intelliSenseMode": "msvc-x64",
+            "intelliSenseMode": "gcc-x64",
             "forcedInclude": [
                 "D:\\Apps\\arduino-1.8.7\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h"
             ]

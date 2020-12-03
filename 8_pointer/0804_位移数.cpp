@@ -68,8 +68,26 @@ void output(int *p,int n){
 }
 
 void move(int num[], int n, int m){
-    
+    int tmp[N], i, j;
+    //tmp填充0？填不填都行，习惯性防止出错……
+    for (i = 0 ; i < n; i++){
+        tmp[i]=0;
+    }
+    //tmp[i] j为num的，前m位给tmp第0位开始
+    for (i = 0, j = n-m; i < m; i++){   //如果j从m开始，m=7就会越界；要j=n-m才行
+        tmp[i] = num[j++];
+    }
+    //把从n个整数向后移m位
+    j = 0;
+    for (i = m; i < n; i++){
+        tmp[i] = num[j++];
+    }
+    //交换数组
+    for (i = 0; i < n; i++){
+        num[i] = tmp[i];
+    }
 }
+
 int main()
 {
     void input(int *p, int n) ;
@@ -87,6 +105,7 @@ int main()
     scanf("%d",&m);
     
     move(num,n,m);
+    printf("\n");
     output(num,n);
             
     return 0;

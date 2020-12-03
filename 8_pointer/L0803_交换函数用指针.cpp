@@ -20,9 +20,9 @@ void swap(int *a,int *b)
 int main()
 {
     int a,b;
-    printf("[INFO] swap:请输入两个整数:");
-    scanf("%d%d",&a,&b);
-    swap(&a,&b);
-    printf("%d,%d",a,b);
+    //printf("[INFO] swap:请输入两个整数:");
+    scanf("%d,%d",&a,&b);
+    if (a<b) swap(&a,&b);
+    printf("max=%d,min=%d\n",a,b);
     return 0;
 }

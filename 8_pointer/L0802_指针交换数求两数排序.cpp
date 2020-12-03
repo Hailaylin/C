@@ -14,8 +14,8 @@ int main()
 {
     int a,b;
     int *p1,*p2,*temp;
-    printf("[INFO] 请输入两个数，空格间隔；从大到小输出a,b:\n");
-    scanf("%d%d",&a,&b);
+    //printf("[INFO] 请输入两个数，空格间隔；从大到小输出a,b:\n");
+    scanf("%d,%d",&a,&b);
     p1=&a,p2=&b;
     if(a<b)
     {
@@ -23,6 +23,6 @@ int main()
         p2=p1;
         p1=temp;
     }
-    printf("max=%d,min=%d\n",*p1,*p2);
+    printf("a=%d,b=%d,max=%d,min=%d\n",a,b,*p1,*p2);
     return 0;
 }
