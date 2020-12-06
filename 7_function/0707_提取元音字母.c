@@ -1,16 +1,16 @@
 /*
-	       C语言程序设计	 
-题号：0707        题目:从字符串中提取元音字母，组成另外一个字符串        得分：0  
+	       C���Գ������	 
+��ţ�0707        ��Ŀ:���ַ�������ȡԪ����ĸ���������һ���ַ���        �÷֣�0  
   
-作业提交截止时间：2020/12/20 0:00:00	 
+��ҵ�ύ��ֹʱ�䣺2020/12/20 0:00:00	 
  	
-题目内容：
-写一个函数，将一个字符串中的元音字母复制到另一字符串，然后输出。
-元音字母：A、E、I、O、U（小写也是）
-例：
-（1）输入：abcdef 输出：ae
-（2）输入：I am a student. I love hebeu. 输出：IaaueIoeee
- 请注意，main()函数必须按如下所示编写：
+��Ŀ���ݣ�
+дһ����������һ���ַ����е�Ԫ����ĸ���Ƶ���һ�ַ�����Ȼ�������
+Ԫ����ĸ��A��E��I��O��U��СдҲ�ǣ�
+����
+��1�����룺abcdef �����ae
+��2�����룺I am a student. I love hebeu. �����IaaueIoeee
+ ��ע�⣬main()�������밴������ʾ��д��
 int main()
 {
     void tiqu(char s1[],char yy[],char s2[]);
@@ -25,30 +25,30 @@ int main()
     return 0;
 }
 
-请将调试好的程序源代码（除main函数外的其余部分）复制到以下文本框，然后再点击“提交”按钮。                     
+�뽫���Ժõĳ���Դ���루��main����������ಿ�֣����Ƶ������ı���Ȼ���ٵ�����ύ����ť��                     
 */
 #include<stdio.h>
 #include<string.h>
 /*
-写一个函数，将一个字符串中的元音字母复制到另一字符串，然后输出。
-元音字母：A、E、I、O、U（小写也是）
+дһ����������һ���ַ����е�Ԫ����ĸ���Ƶ���һ�ַ�����Ȼ�������
+Ԫ����ĸ��A��E��I��O��U��СдҲ�ǣ�
 */
 void tiqu(char s1[],char yy[],char s2[])
 {
-    int i,j,s2_order,len;
-    len=strlen(s1);                     //测量s1的字符串长度给len
-    s2_order=0;                         //初始化s2_order=0
-    for(i=0;i<len;i++)                  //从s1[0]开始，比较是否有元音字母
+    int i,j,s2_order,len=strlen(s1);
+    //len=strlen(s1);                     //����s1���ַ������ȸ�len
+    s2_order=0;                         //��ʼ��s2_order=0
+    for(i=0;i<len;i++)                  //��s1[0]��ʼ���Ƚ��Ƿ���Ԫ����ĸ
     {
-        for(j=0;j<10;j++)               //遍历元音字母，0~9
+        for(j=0;j<10;j++)               //����Ԫ����ĸ��0~9
         {
             if(s1[i]==yy[j])
             {
-                s2[s2_order++]=yy[j];   //把检测到的元音字母给s2
+                s2[s2_order++]=yy[j];   //�Ѽ�⵽��Ԫ����ĸ��s2
             }
         }
     }
-    s2[s2_order]='\0';                //最后赋值最后一个元素'\0'
+    s2[s2_order]='\0';                  //���ֵ���һ��Ԫ��'\0'
 }
 
 int main()
