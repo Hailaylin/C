@@ -33,10 +33,7 @@ int main()
     char num[N];
     int num10[N];
     gets(num);
-    //len可以不测，循环判断用num[i]!='\0'判断
     len=strlen(num);
-    //把大写字母转换为小写字母，减少重复判断
-    strlwr(num);
     //倒叙转换字符为数字并存放
     for(i=len-1,j=0;i>=0;i--)
     {
@@ -44,12 +41,15 @@ int main()
         {
             num10[j++]=num[i]-'0';
         }
+        else if(num[i]>='A' && num[i]<='F')
+        {
+            num10[j++]=num[i]-'A'+10;
+        }
         else if(num[i]>='a' && num[i]<='f')
         {
             num10[j++]=num[i]-'a'+10;
         }
     }
-    //测试用代码
     /*
     for(i=0;i<len;i++)
     {
@@ -58,17 +58,10 @@ int main()
     printf("\n %d\n",j);
     */
     //计算该16进制数对应的10进制数值：位权法
-    /*for(i=0,sum10=0;i<j;i++)
+    for(i=0,sum10=0;i<j;i++)
     {
         sum10=sum10+pow(16,i)*num10[i];
-    }*/
-    //或者用不那么复杂的方法
-    for(i=0,sum10=0;i<j;i++)        //j是上面存的数组的数最大下标
-    {
-        sum10=sum10*16+num10[i];
     }
     printf("%.0f",sum10);
-    //int geshu=sizeof(num10)/sizeof(int); //获取不了已使用的数组大小qaq,只能获取定义大小
-    //printf("\ngehsu=%d\n",geshu);
     return 0;
 }
