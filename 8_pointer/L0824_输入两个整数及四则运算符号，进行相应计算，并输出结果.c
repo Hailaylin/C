@@ -32,5 +32,58 @@
 
 int main()
 {
+    int add(int a, int b);
+    int minus(int a, int b);
+    int multiply(int a, int b);
+    int divide(int a, int b);
+    void calculator(int a, int b, int (*p)(int ,int));
+
+    int a,b;
+    char op;
     
+    scanf("%d,%d %c",&a,&b,&op);
+
+    switch (op)
+    {
+    case '+':
+        calculator(a,b,add);
+        break;
+    case '-':
+        calculator(a,b,minus);
+        break;
+    case '*':
+        calculator(a,b,multiply);
+        break;
+    case '/':
+        calculator(a,b,divide);
+        break;
+    default:
+        break;
+    }
+
+    return 0;
+}
+
+void calculator(int a, int b, int (*p)(int ,int)){
+    printf("%d",(*p)(a,b));
+}
+
+int add(int a, int b){
+    printf("%d+%d=",a,b);
+    return a+b;
+}
+
+int minus(int a, int b){
+    printf("%d-%d=",a,b);
+    return a-b;
+}
+
+int multiply(int a, int b){
+    printf("%d*%d=",a,b);
+    return a*b;
+}
+
+int divide(int a, int b){
+    printf("%d/%d=",a,b);
+    return a/b;
 }
