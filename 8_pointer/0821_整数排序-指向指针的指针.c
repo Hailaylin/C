@@ -91,6 +91,24 @@ void bubbleSort(int **p,int n)
     }
 }
 
+void seleSort(int **p,int n)
+{
+    int i, j, max, temp;
+    for (i = 0; i<n-1; i++){
+        max = i;
+        for (j = i+1; j<n; j++){
+            if (**(p+max)>**(p+j)){
+                max = j;
+            }
+        }
+        if (max != i){
+            temp=**(p+max);     //交换的时候小心i写成j……真是思路不清晰
+            **(p+max)=**(p+i);
+            **(p+i)=temp;
+        }
+    }
+}
+
 int main()
 {
     void input(int *p, int n);
@@ -111,8 +129,8 @@ int main()
         pa[i]=&a[i];    
     }    
     output(pa,n);
-    bubbleSort(pa,n);
-    //seleSort(pa,n);
+    //bubbleSort(pa,n);
+    seleSort(pa,n);
         
     printf("Ordered numbers:\n");
     output(pa,n);
