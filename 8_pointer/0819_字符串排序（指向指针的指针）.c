@@ -37,7 +37,8 @@ Li ruishan
 void input(char **p,int n){
     int i;
     for(i=0;i<n+1;i++){
-        gets(*(p+i));
+        gets(p[i]);
+        puts(p[i]);
     }
 }
 
@@ -45,7 +46,7 @@ void input(char **p,int n){
 void output(char **p,int n){
     int i;
     for(i=0;i<n;i++){
-        puts(*(p+i));
+        //puts(**(p+i));
     }
 }
 
@@ -76,7 +77,7 @@ int main()
     int n;
 
     scanf("%d",&n);
-
+    
     for(i=0;i<n; i++)
     {
         *(name+i)=str[i];
