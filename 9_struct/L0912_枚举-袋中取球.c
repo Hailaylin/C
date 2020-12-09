@@ -113,7 +113,7 @@ int main()
                                 printf("%-10s","yellow");
                                 break;
                             case blue:
-                                printf("%-10s","blue");
+                                printf("%-10s","blue");         //blue单词打错就很离谱，打成bule……
                                 break;
                             case white:
                                 printf("%-10s","white");
