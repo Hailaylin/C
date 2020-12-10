@@ -17,37 +17,74 @@
 （2）输入：You are 250. 389 89235iowerd82353iewr 输出：     250     389   89235   82353
  */
 
+//提交不对劲，可能不让用atoi，要自己实现一遍
+
 #include<stdio.h>
-#include<stdlib.h>
+//#include<stdlib.h>
 #include<ctype.h>
 
 #define N 81
 int main()
 {
-    int my_atoi(char *a);
-    char a[N];
-    gets(a);
-    my_atoi(a);
+    int my_atoi(char *a, int *num);
+    int puts_i(int *a, int n);
+    int a[N], count;
+    
+    char str[N];
+
+    gets(str);          //输入字符串
+    count=my_atoi(str, a);    //转化为整形存储到数组
+    puts_i(a, count);          //输出数组
+    
     return 0;
 }
 
-int my_atoi(char *a){
-    int i,j=0;
-    char tmp[10];
+int my_atoi(char *a, int *num){
+    int atoi(char *str);
+    int i, j=0, num_order=0;
+    char tmp[40];    //缓存开大点，怕数字爆数组
     //遍历找数，前后非数字就不存
-    for(i=0;*(a+i)!='\0';i++){
+    for (i=0; *(a+i)!='\0'; i++){
         j=0;
-        if(isdigit(*(a+i))){
-            while (isdigit(*(a+i+j)))
+        if (isdigit( *(a+i))){
+            while (isdigit( *(a+i+j)))
             {
-                *(tmp+j++)=*(a+i+j);
+                *(tmp+j++) = *(a+i+j);
             }
+            *(tmp+j) = '\0';
             i+=j;
-            printf("%8d",atoi(tmp));
+            //存到num数组,顺带统计找到的整数个数
+            *(num+num_order++)=atoi(tmp);
         }
-        for(j=0;j<10;j++){
-            *(tmp+j)='\0';
+        for (j=0; j<40; j++){
+            *(tmp+j) = '\0';
         }
     }
-    return 0;       //找不到返回0
+    return num_order;       //返回找到的整数个数
+}
+
+//自己实现atoi,就不引用stdlib.h了
+int atoi(char *str)
+{
+    int i;
+    int sum = 0;
+
+    for (i = 0; *(str+i) != '\0'; i++)      //为了可读性和美观性，for循环大括号放在下面，让for循环和下面的语句不会混在一起
+    {
+        sum = (sum + *(str+i) - '0') * 10;
+    }
+    
+    return sum / 10;
+}
+
+int puts_i(int *a, int n)
+{
+    int i;
+
+    for (i=0; i<n; i++)
+    {
+        printf("%8d", *(a+i));
+    }
+
+    return 0;
 }
