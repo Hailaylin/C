@@ -19,6 +19,7 @@
 
 //提交不对劲，可能不让用atoi，要自己实现一遍
 
+/*
 #include<stdio.h>
 //#include<stdlib.h>
 #include<ctype.h>
@@ -29,7 +30,7 @@ int main()
     int my_atoi(char *a, int *num);
     int puts_i(int *a, int n);
     int a[N], count;
-    
+
     char str[N];
 
     gets(str);          //输入字符串
@@ -71,10 +72,10 @@ int atoi(char *str)
 
     for (i = 0; *(str+i) != '\0'; i++)      //为了可读性和美观性，for循环大括号放在下面，让for循环和下面的语句不会混在一起
     {
-        sum = (sum + *(str+i) - '0') * 10;
+        sum = sum * 10 + (*(str+i) - '0');
     }
     
-    return sum / 10;
+    return sum;
 }
 
 int puts_i(int *a, int n)
@@ -82,6 +83,47 @@ int puts_i(int *a, int n)
     int i;
 
     for (i=0; i<n; i++)
+    {
+        printf("%8d", *(a+i));
+    }
+
+    return 0;
+}
+
+*/
+
+//不用函数实现？？？？？？？难道是ctype不能用？不对啊，之前能用的来着
+
+#include<stdio.h>
+#include<string.h>
+#define N 81
+
+int main()
+{
+    int i, j, len, num, m, a[N];
+    char str[N], *p = NULL;
+
+    //获取字符串
+    gets(str);
+    len = strlen(str);
+
+    //判断，存储
+    num = 0, j=0;
+    for (p = str; p < str + len; p++)
+    {
+        m = 0; 
+        if (*p >= '0' && *p <= '9'){
+            m = *p - '0';
+            for (i=0; (*(p+i) >= '0' && *(p+i) <= '9'); i++)
+            {
+                m = m * 10 + *p - '0';
+            }
+            p+i;
+            *(a+j++)=m;
+        }
+    }
+
+    for (i=0; i<=j; i++)
     {
         printf("%8d", *(a+i));
     }
