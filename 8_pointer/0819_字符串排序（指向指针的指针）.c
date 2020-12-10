@@ -31,14 +31,14 @@ Li ruishan
  */
 
 #include<stdio.h>
+#include<stdlib.h>
 #include<string.h>
 #define N 20
 
 void input(char **p,int n){
     int i;
-    for(i=0;i<n+1;i++){
+    for(i=0;i<n;i++){
         gets(p[i]);
-        puts(p[i]);
     }
 }
 
@@ -46,16 +46,16 @@ void input(char **p,int n){
 void output(char **p,int n){
     int i;
     for(i=0;i<n;i++){
-        //puts(**(p+i));
+        puts(*(p+i));
     }
 }
 
 void bubbleSort(char **p,int n){
     int i,j;
     char *temp=NULL;
-    for(i=0;i<n-1;i++){
-        for(j=i+1;j<n-i-1;j++){
-            if(strcmp(*(p+j),*(p+j+1))>0){
+    for(i=0; i<n-1; i++){
+        for(j=0; j<n-i-1; j++){
+            if(strcmp(*(p+j),*(p+j+1))<0){
                 temp=*(p+j+1);
                 *(p+j+1)=*(p+j);
                 *(p+j)=temp;
@@ -77,15 +77,26 @@ int main()
     int n;
 
     scanf("%d",&n);
-    
-    for(i=0;i<n; i++)
+    getchar();          //吸回车，不吸收回车出问题，会少输出一个数；不然就清空缓冲区fflush(),但是杜哥的oj不能用233
+    //fflush(stdin);        //找了半天的bug就这个问题……还以为指针的错误，凸(艹皿艹 )    
+    for(i=0;i<=n; i++)
     {
         *(name+i)=str[i];
     }
     p=name;
+    /*
+    for (i=0; i<n; i++){
+        gets(*(name+i));
+    }
     
+    
+    for (i=0; i<n; i++){
+        printf("%s\n", *(name+i));
+    }
+    */
     input(p,n);
-    //bubbleSort(p,n);
+    bubbleSort(p,n);
+    printf("Ordered strings:\n");
     output(p,n);
 
     return 0;
