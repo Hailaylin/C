@@ -36,8 +36,8 @@ int main()
 void count(char *str)
 {
     int upper=0, lower=0, space=0, digit=0, others=0;
-
-    while ( isupper(  ( *++str = getchar() )  == '\n' ? *str = 0 : *str)  ? ++upper : ( islower(*str) ? ++lower : ( isspace(*str) ? ++space : ( isdigit(*str) ? ++digit : ( *str == '\0' ? 0 : ++others ) ) ) ) ) ;
+    //如果第一行是\n就直接输出0,bug.    
+    while ( isupper( ( *++str = getchar() )  == '\n' ? *str = 0 : *str )  ? ++upper : ( islower(*str) ? ++lower : ( isspace(*str) ? ++space : ( isdigit(*str) ? ++digit : ( *str == '\0' ? 0 : ++others ) ) ) ) ) ;
 
     printf("upper case:%d,lower case:%d,space:%d,digit:%d,others:%d", upper, lower, space, digit, others);
 }
