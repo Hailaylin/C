@@ -2,9 +2,10 @@
  * @file 0808_统计字母数字多少.cpp
  * @author your name (you@domain.com)
  * @brief 代码整洁之道 小胖+Hailay
- * @version 0.5
+ * @version 0.6
  * @date 2020-12-03
  * @update 2020年12月12日23:38:02
+ * @last 2020年12月13日00:34:22
  * 
  * @copyright Copyright (c) 2020
  * 题号：0808        题目:统计字母、空格等个数        得分：0  
@@ -36,7 +37,7 @@ void count(char *str)
 {
     int upper=0, lower=0, space=0, digit=0, others=0;
 
-    while ( ( *++str = getchar() )  == '\n' ? *str = 0 : ( isupper( *str )  ? ++upper : ( islower(*str) ? ++lower : ( isspace(*str) ? ++space : ( isdigit(*str) ? ++digit : ( *str == '\0' ? 0 : ++others ) ) ) ) ) ) ;
+    while ( *++str == '\n' ? *str = 0 : ( isupper( *str )  ? ++upper : ( islower(*str) ? ++lower : ( isspace(*str) ? ++space : ( isdigit(*str) ? ++digit : ( *str == '\0' ? 0 : ++others ) ) ) ) ) ) ;
 
     printf("upper case:%d,lower case:%d,space:%d,digit:%d,others:%d", upper, lower, space, digit, others);
 }
