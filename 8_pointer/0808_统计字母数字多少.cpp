@@ -1,8 +1,8 @@
 /**
  * @file 0808_统计字母数字多少.cpp
  * @author your name (you@domain.com)
- * @brief 
- * @version 0.4
+ * @brief 代码整洁之道 小胖+Hailay
+ * @version 0.5
  * @date 2020-12-03
  * @update 2020年12月12日23:38:02
  * 
@@ -20,25 +20,29 @@
  */
 
 #include<stdio.h>
-#include<string.h>
 #include<ctype.h>
-#define N 100
+#define N 81
 
 int main()
-{   //返回指针?返回指向数组的指针？也行吧^\……不存了，直接输出
+{   
     void count(char *str);
     char str[N];
-    gets(str);      //gets只有
-    count(str-1);   //把str的--移到这里-1试试
+    gets(str);
+    count(str-1);
     return 0;
 }
 
-//代码整洁之道 小胖+Hailay
 void count(char *str)
 {
     int upper=0, lower=0, space=0, digit=0, others=0;
 
-    while ( isupper( ( *++str/* = getchar() */)  == '\n' ? *str = 0 : *str )  ? ++upper : ( islower(*str) ? ++lower : ( isspace(*str) ? ++space : ( isdigit(*str) ? ++digit : ( *str == '\0' ? 0 : ++others ) ) ) ) ) ;
+    while ( ( *++str = getchar() )  == '\n' ? *str = 0 : ( isupper( *str )  ? ++upper : ( islower(*str) ? ++lower : ( isspace(*str) ? ++space : ( isdigit(*str) ? ++digit : ( *str == '\0' ? 0 : ++others ) ) ) ) ) ) ;
 
     printf("upper case:%d,lower case:%d,space:%d,digit:%d,others:%d", upper, lower, space, digit, others);
 }
+
+/*
+注:
+    1. count(str-1)虽然越界，但是没有访问越界的元素，只是把地址减一个char长度，后面调用函数又在访问数组元素前自增1，没事
+    2. 输入不用gets()用getchar()在杜哥oj会出问题0分，在vscode用getchar()没问题,用getchar()更简洁，少一行
+*/
