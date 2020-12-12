@@ -2,8 +2,9 @@
  * @file 0808_统计字母数字多少.cpp
  * @author your name (you@domain.com)
  * @brief 
- * @version 0.1
+ * @version 0.2
  * @date 2020-12-03
+ * @update 2020年12月12日23:38:02
  * 
  * @copyright Copyright (c) 2020
  * 题号：0808        题目:统计字母、空格等个数        得分：0  
@@ -27,30 +28,16 @@ int main()
 {   //返回指针?返回指向数组的指针？也行吧^\……不存了，直接输出
     void count(char *str);
     char str[N];
-    gets(str);
     count(str);
     return 0;
 }
 
-//返回一个指向尾字符的指针？X 只返回output数组
+//代码整洁之道 小胖+Hailay
 void count(char *str)
 {
-    int i, len;
-    int upper, lower, space, digit, others;
-    upper=lower=space=digit=others=0;
+    int upper=0, lower=0, space=0, digit=0, others=0;
 
-    len=strlen(str);            //或者str[i]=='\0'就停止
-    for(i=0;i<len;i++){
-        if (isupper(*(str+i))) 
-            upper++;
-        else if (islower(*(str+i)))
-            lower++;
-        else if (isspace(str[i]))
-            space++;
-        else if(isdigit(str[i]))
-            digit++;
-        else others++; 
-    }
+    while ( isupper(  ( *++str = getchar() )  == '\n' ? *str = 0 : *str)  ? ++upper : ( islower(*str) ? ++lower : ( isspace(*str) ? ++space : ( isdigit(*str) ? ++digit : ( *str == '\0' ? 0 : ++others ) ) ) ) ) ;
 
-    printf("upper case:%d,lower case:%d,space:%d,digit:%d,others:%d",upper,lower,space,digit,others);
+    printf("upper case:%d,lower case:%d,space:%d,digit:%d,others:%d", upper, lower, space, digit, others);
 }
