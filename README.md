@@ -18,9 +18,13 @@ PTA https://pintia.cn/problem-sets?tab=1
 
 ### 配置
 gitbash中运行，或者terminal中运行，管理员权限
-ssh-keygen                                                  -t rsa -C "hailay@qq.com"
+
+ssh-keygen -t rsa -C "hailay@qq.com"
+
 ssh -v git@github.com
+
 ssh-agent -s
+
 ssh-add ~/.ssh/id_rsa (windows下注意观察目录)
 
 上传公钥
@@ -31,16 +35,25 @@ ssh -T git@github.com
 
 ### 拉取库
 git clone git库地址
+
 要在本地建，就要git init
+
+
 还要初始化
+
+
 Git 全局设置:
 
 git config --global user.name "HailayLin" 
+
 git config --global user.email "hailay@qq.com"
 
 	• 本地建仓git init；
 	• 拉取github :git clone 地址
+    
 git remote add origin https://git.oschina.net/name/package.git
+
 git push -u origin master（分支名）
+                                                                                                                                            
 剩下的工作都可以在vscode中完成
 
