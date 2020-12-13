@@ -27,7 +27,9 @@ ssh-agent -s
 
 ssh-add ~/.ssh/id_rsa (windows下注意观察目录)
 
-上传公钥
+//有问题要百度看看，好像一定要git bash搞最好
+
+**上传公钥**
 
 ### 测试
 ssh -T git@github.com
