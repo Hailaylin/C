@@ -40,7 +40,7 @@ int main()
 
 #include<stdio.h>
 #include<ctype.h>
-#include <string.h>
+#include<string.h>
 
 void extract(char *p1, char *p2)
 {
@@ -52,7 +52,7 @@ void extract(char *p1, char *p2)
     }
     *(p2+j)='\0';
 }
-
+/*
 void reverse(char *p)
 {
     int i, j;
@@ -67,6 +67,17 @@ void reverse(char *p)
     }
     *(p+i+1)='\0';
 }
+*/
+void reverse(char *p)
+{
+    int i, len = strlen(p);
+    for ( i = 0 ; i < len / 2 ; i++ ){
+        char temp = *(p+i);
+        *(p+i) = *(p+len-i-1);
+        *(p+len-i-1) = temp;
+    }
+}
+
 
 int main()
 {
