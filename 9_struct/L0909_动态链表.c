@@ -46,11 +46,12 @@ int main()
     void printLinkList(LinkList *list);
     int changeLinkListValue(LinkList *list, int n);
     int delet(LinkList *list, int n);
+    int insert(LinkList *list, int n);
 
     scanf("%d", &n);
     stu = createLinkList(n);
     printLinkList(stu);
-    delet(stu, 2);
+    insert(stu, 1);
     printLinkList(stu);
 
     return 0;
@@ -108,16 +109,39 @@ int changeLinkListValue(LinkList *list, int n)
 /*      删除节点，成功返回1     */
 int delet(LinkList *list, int n)
 {
-    for (int i = 0 ; i < n-1 && list->next != NULL; i++){
-        list = list->next;      //到n的前一个元素
+    LinkList *first, *second;
+    second = list;
+    for (int i = 0 ; i < n && second->next != NULL; i++){
+        first = second;
+        second = second->next;
     }
     if (list != NULL){
-        LinkList *temp = list->next;    //把n元素存起来
-        list->next = temp->next;        //n-1元素的next指向n+1
-        free(temp);                     //释放n
-        return 1;                       //稍显复杂的写法，有点难懂
+        first->next = second->next;
+        free(second);
+        return 1;
     }
     else{
+        puts("节点不存在!\n");
+        return 0;
+    }
+}
+
+/*      插入节点    */
+int insert(LinkList *list, int n)
+{
+    LinkList *first, *second = list, *ins = (LinkList *)calloc(1, sizeof(LinkList));
+    printf("请输入要插入的值,名字 分数:");
+    scanf("%s%f", ins->name, &ins->score);
+    for (int i = 0; i < n && second != NULL; i++){
+        first = second;
+        second = second->next;
+    }
+    if (second != NULL){
+        ins->next = second->next;
+        first->next = ins;
+        return 1;
+    }
+    else {
         puts("节点不存在!\n");
         return 0;
     }
