@@ -51,7 +51,7 @@ int main()
     scanf("%d", &n);
     stu = createLinkList(n);
     printLinkList(stu);
-    insert(stu, 1);
+    insert(stu, 0);
     printLinkList(stu);
 
     return 0;
@@ -126,18 +126,17 @@ int delet(LinkList *list, int n)
     }
 }
 
-/*      插入节点    */
+/*      插入节点,在第n个节点后插入    */
 int insert(LinkList *list, int n)
 {
-    LinkList *first, *second = list, *ins = (LinkList *)calloc(1, sizeof(LinkList));
-    printf("请输入要插入的值,名字 分数:");
-    scanf("%s%f", ins->name, &ins->score);
-    for (int i = 0; i < n && second != NULL; i++){
-        first = second;
-        second = second->next;
+    LinkList *first = list, *ins = (LinkList *)calloc(1, sizeof(LinkList));
+    for (int i = 0; i < n && first != NULL; i++){
+        first = first->next;
     }
-    if (second != NULL){
-        ins->next = second->next;
+    if (first != NULL){
+        printf("请输入要插入的值,名字 分数:");
+        scanf("%s%f", ins->name, &ins->score);
+        ins->next = first->next;
         first->next = ins;
         return 1;
     }
