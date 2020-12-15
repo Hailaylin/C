@@ -52,7 +52,7 @@ void extract(char *p1, char *p2)
     }
     *(p2+j)='\0';
 }
-/*
+/*      效率低下的算法
 void reverse(char *p)
 {
     int i, j;
@@ -77,7 +77,6 @@ void reverse(char *p)
         *(p+len-i-1) = temp;
     }
 }
-
 
 int main()
 {
