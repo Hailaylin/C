@@ -2,6 +2,7 @@
  * @file L0909_动态链表.c
  * @author HailayLin (hailay@qq.com)
  * @brief 尝试建立一个单项动态链表
+ *        参考  https://blog.csdn.net/Endeavor_G/article/details/80552680
  * @version 0.1
  * @date 2020-12-15
  * 
