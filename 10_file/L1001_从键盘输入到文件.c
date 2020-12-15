@@ -25,11 +25,9 @@ int main()
         exit(0);
     }
     printf("请输入要存放在文件的字符串(以#结束):");
-    ch = getchar();
-    while (ch != '#'){
+    while ( (ch = getchar()) != '#'){
         fputc(ch, fp);
         putchar(ch);
-        ch = getchar();
     }
     fclose(fp);
     putchar('\n');
