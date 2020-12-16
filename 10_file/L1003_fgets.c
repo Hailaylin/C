@@ -1,7 +1,7 @@
 /**
  * @file L1003_fgets.c
  * @author HailayLin (hailay@qq.com)
- * @brief 
+ * @brief 输入若干字符串排序后输出到文件中
  * @version 0.1
  * @date 2020-12-16
  * 
@@ -14,16 +14,15 @@
 #define N 81
 int main()
 {
-    FILE *from, *to;    //记得加个反斜杠
-    char str[N], ffromN[81]="D:\\Onedrive\\C\\10_file\\1001c.txt", ftoN[81]="D:\\Onedrive\\C\\10_file\\1003.txt";
-    if ( (from = fopen(ffromN, "r")) == NULL || (to = fopen(ftoN, "w")) == NULL){
-        puts("无法打开文件!\n");
-        exit(0);
+    FILE *to;
+    int n;
+    puts("请输入要排序的字符串个数:");
+    scanf("%d", &n);
+    char *str = (char *)calloc(n*N, sizeof(char));
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%s", (str+i));
     }
-    fgets(str, N, from);
-    fputs(str, to);
-    puts(str);
-    fclose(from);
-    fclose(to);
+    
     return 0;
 }
