@@ -14,10 +14,8 @@
 #define N 81
 int main()
 {
-    FILE *from, *to;
-    char str[N], ffromN[20], ftoN[20];
-    puts("请输入要打开的文件名(复制来源);复制去向:");
-    scanf("%s%s", ffromN, ftoN);
+    FILE *from, *to;    //记得加个反斜杠
+    char str[N], ffromN[81]="D:\\Onedrive\\C\\10_file\\1001c.txt", ftoN[81]="D:\\Onedrive\\C\\10_file\\1003.txt";
     if ( (from = fopen(ffromN, "r")) == NULL || (to = fopen(ftoN, "w")) == NULL){
         puts("无法打开文件!\n");
         exit(0);
@@ -25,7 +23,6 @@ int main()
     fgets(str, N, from);
     fputs(str, to);
     puts(str);
-    putchar(10);
     fclose(from);
     fclose(to);
     return 0;
