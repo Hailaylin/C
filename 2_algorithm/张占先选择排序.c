@@ -19,11 +19,11 @@ typedef struct Student{
 }Stu;
 
 
-//张占先的排序方法：也是选择法（张式选择法）。选择法是记录下标，
-void xianSort(Stu a[], int n){
-    for (int i = 0 ; i<n-1 ; i++){        //趟次
+//张占先的排序方法：也是选择法（张式选择法）。选择法是记录下标。+指针
+void xianSort(Stu *a, int n){
+    for (int i = 0 ; i<n-1 ; i++){                  //趟次
         for (int j = i+1; j<n; j++){
-            if (a[i].scroe<a[j].scroe){
+            if ((*(a+i)).scroe < (a+j)->scroe){     //指针的用法
                 Stu temp = a[i];
                 a[i]=a[j];
                 a[j]=temp;
@@ -36,14 +36,14 @@ int main()
 {
     int n;
     scanf("%d", &n);
-    Stu stu[n];
+    Stu stu[n],*p=stu;
 
     for (int i = 0; i < n ; i++){
         scanf("%s%f", stu[i].name, &stu[i].scroe);
     }
     xianSort(stu, n);
     for (int i = 0; i < n ; i++){
-        printf("%s%.2f\n", stu[i].name, stu[i].scroe);
+        printf("%s %4.2f\n", stu[i].name, stu[i].scroe);
     }
 
     return 0;
