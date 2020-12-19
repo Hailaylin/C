@@ -14,9 +14,8 @@
 #include<math.h>
 int main()
 {
-    char ch = 'A'+'6'-'3';
-    char str[20]="I love StarDust!";
-    printf("%c,%d\n", ch, ch);
-    printf("%-20s\n", str);
+    float f1, f2;
+    scanf("%f%f", &f1, &f2);
+    printf("%f,%f", f1, f2);
     return 0;
 }
