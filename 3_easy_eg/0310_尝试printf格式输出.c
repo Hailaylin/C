@@ -14,9 +14,9 @@
 #include<math.h>
 int main()
 {
-    double y=0.5,z=1.5;int x=10;
-    y=log10(y)+pow(y);
-    //x=(int)(atan2((double)x,y)+exp(y-0.2));
-    printf("%d\n", y);
+    char ch = 'A'+'6'-'3';
+    char str[20]="I love StarDust!";
+    printf("%c,%d\n", ch, ch);
+    printf("%-20s\n", str);
     return 0;
 }
