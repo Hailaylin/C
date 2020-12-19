@@ -18,7 +18,7 @@ int main()
     int n;
     puts("请输入要排序的字符串个数:");
     scanf("%d", &n);
-    char *str = (char *)calloc(n*N, sizeof(char));
+    char *str = (char *)malloc(sizeof(char));
     for (int i = 0; i < n; i++)
     {
         scanf("%s", (str+i));
