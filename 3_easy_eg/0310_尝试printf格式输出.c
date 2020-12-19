@@ -11,20 +11,12 @@
 //*要单独写注释才有这种颜色……
 
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    int a=7;
-    long y=-43456;
-    printf("%8x\n", 23456);
-    printf("%#8x\n", 23456);    //! "#"输出十六进制的前导符0x
-    printf("%d\n", (int)(a+y)); //! 类型转换直接截断
-    printf("y=%-8ld\n", y);
-    printf("y=%-08ld\n", y);
-    printf("y=%08ld\n", y);
-    printf("y=%+8ld\n", y);     //! +是右对齐？！
-
-    char ch = '\123';              //! 超了？
-    printf("%c\n", ch);
-
+    double y=0.5,z=1.5;int x=10;
+    y=log10(y)+pow(y);
+    //x=(int)(atan2((double)x,y)+exp(y-0.2));
+    printf("%d\n", y);
     return 0;
 }
