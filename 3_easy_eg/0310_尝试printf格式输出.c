@@ -14,8 +14,7 @@
 #include<math.h>
 int main()
 {
-    float f1, f2;
-    scanf("%f%f", &f1, &f2);
-    printf("%f,%f", f1, f2);
+    char ch = 0101;
+    printf("%c\n", ch);
     return 0;
 }
