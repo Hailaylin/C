@@ -14,9 +14,17 @@
 int main()
 {
     int a=7;
-    float y=4.7;
+    long y=-43456;
     printf("%8x\n", 23456);
-    printf("%#8x\n", 23456); //! "#"输出十六进制的前导符0x
-    printf("%d", (int)(a+y));//! 类型转换直接截断
+    printf("%#8x\n", 23456);    //! "#"输出十六进制的前导符0x
+    printf("%d\n", (int)(a+y)); //! 类型转换直接截断
+    printf("y=%-8ld\n", y);
+    printf("y=%-08ld\n", y);
+    printf("y=%08ld\n", y);
+    printf("y=%+8ld\n", y);     //! +是右对齐？！
+
+    char ch = '\123';              //! 超了？
+    printf("%c\n", ch);
+
     return 0;
 }
