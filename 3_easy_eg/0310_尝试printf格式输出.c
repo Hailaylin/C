@@ -15,6 +15,8 @@
 int main()
 {
     char ch = 0101;
-    printf("%c\n", ch);
+    char ch1 = '\x0f';
+    char ch2 = '123';
+    printf("%c,%c,%c\n", ch, ch1, ch2);
     return 0;
 }
