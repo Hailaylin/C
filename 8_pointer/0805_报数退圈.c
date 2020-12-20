@@ -2,7 +2,7 @@
  * @file 0805_报数退圈.c
  * @author HailayLin (hailay@qq.com)
  * @brief 链表写报数退圈
- * @version 0.2
+ * @version 0.3
  * @date 2020-12-10
  * 
  * @copyright Copyright (c) 2020  Hailay.site & Xihe.ai
@@ -52,6 +52,7 @@ Peo *baoshu(Peo *head, int n){
 }
 
 //创建链表
+// TODO 环形链表，把head地址接到end->next上面；而且head也要储存一个id才行……高数整完先
 Peo *create(int n)
 {
     Peo *head=NULL, *node=NULL, *end=NULL;     
