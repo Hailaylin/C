@@ -34,22 +34,15 @@ const int LEN = sizeof(Peo);
 
 int main()
 {
-    Peo *create(Peo *head, int n);
+    Peo *create(int n);
     void printList(Peo *head, int n);
+    Peo *p;
     int n;
     scanf("%d", &n);
-    Peo *people = (Peo *)malloc(LEN);   //分配头地址？……
     
-    if (people = NULL){
-        printf("创建链表错误!");
-        return 1;
-    }
-    else{
-        //baoshu(people, n);
-        people = create(people, n);
-        printList(people, n);
-        free(people);
-    }
+    p=create(n);
+    printList(p, n);
+
     return 0;
 }
 //思路：创建链表，赋值，报数退圈
@@ -59,22 +52,22 @@ Peo *baoshu(Peo *head, int n){
 }
 
 //创建链表
-Peo *create(Peo *head, int n)
+Peo *create(int n)
 {
-    Peo *node, *end;
-    node = (Peo *)malloc(LEN);
-    node = head;
+    Peo *head=NULL, *node=NULL, *end=NULL;     
     int i;
+    head = (Peo *)malloc(LEN);
+    end = head;                     //* end指向上一节点，node当前节点
 
     for (i=0; i<n; i++)
     {
+        node = (Peo *)malloc(LEN);
         node->id = i+1;
-        end = (Peo *)malloc(LEN);
         node->next = end;
-        node = end;
+        end = node;
     }
 
-    node->next = head;
+    end->next = NULL;
     return head;
 }
 
@@ -83,7 +76,7 @@ void printList(Peo *head, int n)
 {
     int i;
     Peo *p=head;
-    for (i=0; i<n; i++)
+    for (i=0; i<n && p != NULL; i++)
     {
         printf("%d\n", p->id);
         p = p->next;
