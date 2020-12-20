@@ -63,7 +63,7 @@ Peo *create(int n)
     {
         node = (Peo *)malloc(LEN);
         node->id = i+1;
-        node->next = end;
+        end->next = node;
         end = node;
     }
 
@@ -78,7 +78,7 @@ void printList(Peo *head, int n)
     Peo *p=head;
     for (i=0; i<n && p != NULL; i++)
     {
+        p = p->next;                //先找下一个再输出，否则输出头指针指向的变量，那里没有赋初值
         printf("%d\n", p->id);
-        p = p->next;
     }
 }
