@@ -41,7 +41,7 @@ int main()
     scanf("%d", &n);
     
     p=create(n);
-    printList(p, n);
+    printList(p, 2*n);
 
     return 0;
 }
@@ -60,15 +60,16 @@ Peo *create(int n)
     head = (Peo *)malloc(LEN);
     end = head;                     //* end指向上一节点，node当前节点
 
-    for (i=0; i<n; i++)
+    for (i=1; i<=n; i++)            //* 从1~n，head也要存数据
     {
-        node = (Peo *)malloc(LEN);
-        node->id = i+1;
+        node = end;
+        node->id = i;
+        node = (Peo *)malloc(LEN);  //* 新开一个节点
         end->next = node;
         end = node;
     }
 
-    end->next = NULL;
+    end->next = head;
     return head;
 }
 
@@ -78,8 +79,24 @@ void printList(Peo *head, int n)
     int i;
     Peo *p=head;
     for (i=0; i<n && p != NULL; i++)
-    {
-        p = p->next;                //先找下一个再输出，否则输出头指针指向的变量，那里没有赋初值
+    {               
         printf("%d\n", p->id);
+        p = p->next;                //* 先输出再找下一个
     }
 }
+
+
+/**
+ * @brief 奇怪的输出，环形链表断了一个
+
+4
+1
+2
+3
+4
+11296384
+1
+2
+3
+ * 
+ */
