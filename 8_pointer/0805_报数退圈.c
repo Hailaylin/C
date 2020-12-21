@@ -49,7 +49,7 @@ int main()
 Peo *baoshu(Peo *head, int n){
     Peo *node = (Peo *)malloc(LEN);
 
-}
+} 
 
 //创建链表
 // TODO 环形链表，把head地址接到end->next上面；而且head也要储存一个id才行……高数整完先
@@ -58,13 +58,13 @@ Peo *create(int n)
     Peo *head=NULL, *node=NULL, *end=NULL;     
     int i;
     head = (Peo *)malloc(LEN);
-    end = head;                     //* end指向上一节点，node当前节点
+    head->id = 1;
+    end = head;
 
-    for (i=1; i<=n; i++)            //* 从1~n，head也要存数据
+    for (i=2; i<=n; i++)            //* 从2~n，head也要存数据
     {
-        node = end;
-        node->id = i;
         node = (Peo *)malloc(LEN);  //* 新开一个节点
+        node->id = i;
         end->next = node;
         end = node;
     }
@@ -84,19 +84,3 @@ void printList(Peo *head, int n)
         p = p->next;                //* 先输出再找下一个
     }
 }
-
-
-/**
- * @brief 奇怪的输出，环形链表断了一个
-
-4
-1
-2
-3
-4
-11296384
-1
-2
-3
- * 
- */
