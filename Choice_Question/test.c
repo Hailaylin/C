@@ -13,10 +13,14 @@
 
 int main()
 {
-    int x, y;
-    x=y=0;
-    while(x<15)
-    y++,x+=++y;
-    printf("%d,%d", y, x);
+    //测试double的能否成为判断while循环的数
+    double a = 1.11, b = -1.11;
+    int flag=4;
+    while (flag != 0 && a){
+        flag--;
+        printf("1. Yes!\n");
+    }
+    for (flag = 4; flag >= 0 && b ; flag--) printf("2. Yes!\n");
+    //实践证明double负数整数都表示非0——真
     return 0;
 }
