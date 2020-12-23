@@ -13,7 +13,15 @@
 
 int main()
 {
-    while() printf("233\n");
-    printf("Stop\n");
+    int t;
+    int a=1,b=2,c=2;
+    while(a<b<c)
+    {
+        t=a;
+        a=b;
+        b=t;//交换a,b值,交换了两次……没有考虑到循环执行到底的情况
+        c--;
+    }
+    printf("%d,%d,%d",a,b,c);
     return 0;
 }
