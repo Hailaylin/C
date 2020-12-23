@@ -13,9 +13,14 @@
 
 int main()
 {
-    int x=0, y=1;
-    x=3*y,x+1;
-    
-    printf("END:x=%d,y=%d",x,y);
+    int t;
+    t=0;
+    int flag;
+    while(flag=printf("*"))
+    {
+    t++;
+    if(t<3) break;
+    }
+    printf("\nflag=%d,t=%d\n",flag,t);
     return 0;
 }
