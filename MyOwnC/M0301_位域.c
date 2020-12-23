@@ -11,7 +11,7 @@
 
 //一个表示0~127年龄的结构体，位域变量
 #include<stdio.h>
-//#include<string.h>
+
 enum sex {boy, girl};
 char *strsex[]={"boy", "girl"};
 
@@ -24,9 +24,9 @@ int main()
 {
     Peo.age = 19;
     Peo.sex = boy;
-    printf("Peo.age=%3d, sex=%4s, sizeof(Peo)=%d\n", Peo.age, *(strsex+Peo.sex), sizeof(Peo));
+    printf("Peo.age=%3d, sex=%4s, sizeof(Peo)=%d\n", Peo.age, strsex[Peo.sex], sizeof(Peo));
 
-    Peo.age = 256;
+    Peo.age = 127;
     Peo.sex = girl;
     printf("Peo.age=%3d, sex=%4s, sizeof(Peo)=%d\n", Peo.age, *(strsex+Peo.sex), sizeof(Peo));
     return 0;
