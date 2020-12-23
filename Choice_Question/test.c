@@ -14,7 +14,7 @@
 int main()
 {
     //测试int的能否成为判断while循环的数
-    int a = 1.11, b = -1.11;
+    int a = +0; double b = -0;
     int flag=4;
     while (flag != 0 && a){
         flag--;
