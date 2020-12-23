@@ -13,8 +13,10 @@
 
 int main()
 {
-    int n=0;
-    while(n++<=2);
-    printf("%d",n);
+    int x, y;
+    x=y=0;
+    while(x<15)
+    y++,x+=++y;
+    printf("%d,%d", y, x);
     return 0;
 }
