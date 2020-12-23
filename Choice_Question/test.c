@@ -13,14 +13,7 @@
 
 int main()
 {
-    int t;
-    t=0;
-    int flag;
-    while(flag=printf("*"))
-    {
-    t++;
-    if(t<3) break;
-    }
-    printf("\nflag=%d,t=%d\n",flag,t);
+    int minus = -1;
+    while(minus) printf("Yes!");
     return 0;
 }
