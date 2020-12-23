@@ -13,7 +13,14 @@
 
 int main()
 {
-    int minus = -1;
-    while(minus) printf("Yes!");
+    int t = 0, a;
+    int flag;
+    while(flag=printf("*"))
+    {
+    t++;
+    a = printf("\nflag=%d,t=%d\n",flag,t);
+    if(t<3) break;          //这个限制条件使得循环只执行一次
+    }
+    printf("%d", a);
     return 0;
 }
