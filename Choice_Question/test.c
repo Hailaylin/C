@@ -13,8 +13,7 @@
 
 int main()
 {
-  int x=0,s=0;
-  while(!x!=0) s+=++x;
-  printf("%d",s);
+    while() printf("233\n");
+    printf("Stop\n");
     return 0;
 }
