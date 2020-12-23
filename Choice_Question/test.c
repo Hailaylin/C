@@ -13,15 +13,12 @@
 
 int main()
 {
-    int t;
-    int a=1,b=2,c=2;
-    while(a<b<c)
-    {
-        t=a;
-        a=b;
-        b=t;//交换a,b值,交换了两次……没有考虑到循环执行到底的情况
-        c--;
+    int x, y;
+    for(y=1;y<10;){
+        y=((x=3*y,x+1),x-1);
+        printf("%d,%d\n",x,y);
     }
-    printf("%d,%d,%d",a,b,c);
+    
+    printf("END:x=%d,y=%d",x,y);
     return 0;
 }
