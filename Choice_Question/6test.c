@@ -1,15 +1,14 @@
 #include<stdio.h>
+#include<string.h>
 int main()
-{   
- int a[3]={3*0};
-    for (int i = 0; i < 3; i++)
-    {
-        printf("%d\t", a[i]);
-    }
-    
-    int i;
-    for(i=0;i<3;i++)
-      scanf("%d",&a[i]);
-    for(i=1;i<3;i++) a[0]=a[0]+a[i];
-    printf("%d\n",a[0]);
+{ char a[80]="AB",b[80]="LMNP";
+   int i=0;
+   strcat(a,b);
+   puts(a);
+   puts(b);
+   while(a[i++]!='\0'){
+       printf("i=%d, a[%d]=%c, b[%d]=%c\n", i, i, a[i], i, b[i]);
+       b[i]=a[i];
+   }
+   puts(b);
 }
