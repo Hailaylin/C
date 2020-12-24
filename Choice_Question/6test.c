@@ -1,12 +1,18 @@
 #include<stdio.h>
 
+void fun()
+{
+    static int a[2][2];
+    for (int i = 0; i < 4; i++)
+    {
+        printf("%d\n", *(*a+i));
+    }
+    
+}
+
 int main()
 {
-    int nmain, n[3];
-    for (int i = 0; i < 3; i++)
-    {
-        printf("i = %d, n [%d] = %d\n", i, i, n[i]);
-    }
+    fun();
     return 0;
 }
 
