@@ -1,14 +1,12 @@
 #include<stdio.h>
 #include<string.h>
 int main()
-{ char a[80]="AB",b[80]="LMNP";
-   int i=0;
-   strcat(a,b);
-   puts(a);
-   puts(b);
-   while(a[i++]!='\0'){
-       printf("i=%d, a[%d]=%c, b[%d]=%c\n", i, i, a[i], i, b[i]);
-       b[i]=a[i];
-   }
-   puts(b);
+{
+    char *str = "\ta\017bc";
+    char c1 = 45;
+    char c2 = '\x2d';
+    char c3 = '\055';
+    int len = strlen(str);
+    printf("%s, len=%d, c1=%c, c2=%c, c3=%c\n", str, len, c1, c2, c3);
+    return 0;
 }
