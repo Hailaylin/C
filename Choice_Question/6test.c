@@ -1,14 +1,12 @@
 #include<stdio.h>
-main()
-{char str[]="SSWLIA",c;
- int k;
- for(k=2;(c=str[k])!='\0';k++)
-  {switch(c)
-   {case 'I':++k;break;
-     case 'L':continue;
-     default :putchar(c);continue;
-    }
-  putchar('*');
 
+int main()
+{
+    int nmain, n[3];
+    for (int i = 0; i < 3; i++)
+    {
+        printf("i = %d, n [%d] = %d\n", i, i, n[i]);
+    }
+    return 0;
 }
-}
+
