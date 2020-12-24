@@ -1,12 +1,24 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+struct bit
+{
+unsigned a_bit:2;
+unsigned b_bit:2;
+unsigned c_bit:1;
+unsigned d_bit:1;
+unsigned e_bit:2;
+unsigned word:8;
+};
 int main()
 {
-    char *str = "\ta\017bc";
-    char c1 = 45;
-    char c2 = '\x2d';
-    char c3 = '\055';
-    int len = strlen(str);
-    printf("%s, len=%d, c1=%c, c2=%c, c3=%c\n", str, len, c1, c2, c3);
-    return 0;
+struct bit *p;
+unsigned int modeword;
+printf("Enter the mode word (HEX):");
+scanf("%x",&modeword);
+p=(struct bit *)&modeword;
+printf("\n");
+printf("a_bit: %d\n",p ->a_bit);
+printf("b_bit: %d\n",p ->b_bit);
+printf("c_bit: %d\n",p ->c_bit);
+printf("d_bit: %d\n",p ->d_bit);
+printf("e_bit: %d\n",p ->e_bit);
 }
