@@ -10,11 +10,8 @@
  */
 
 #include<stdio.h>
-
 int main()
-{
-    char *s; s="china";
-    printf("%s", s);
-    return 0;
-
+{  int x[5]={2,4,6,8,10}, *p,**pp;
+    p=x;   pp=&p;
+    printf("%3d",*(p++)); printf("%3d\n",**pp);
 }
