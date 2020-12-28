@@ -14,10 +14,8 @@
 int main(){
 	char str[5];
 	int i=0;
-	for(;i<=4;i++){
-		str[i]=getchar();
-		str[i]=str[i]+4; 
-	}
+	while(i<5 && (*(str+i++)  = getchar()+4) != 4);
+	*(str+i) = '\0';
 	printf("%s",str);
 	return 0;
 }

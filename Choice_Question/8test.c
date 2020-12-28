@@ -11,7 +11,8 @@
 
 #include<stdio.h>
 int main()
-{  int x[5]={2,4,6,8,10}, *p,**pp;
-    p=x;   pp=&p;
-    printf("%3d",*(p++)); printf("%3d\n",**pp);
+{  char *s="\ta\018bc";  for (  ;*s != '\0';s++)     printf("*");
+
+getchar()
+scanf()
 }
