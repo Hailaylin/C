@@ -16,7 +16,6 @@ void rand_ball(int n,int max,int array[])
 {
     int i,j,z,flag=0,same=0;
     srand((unsigned)time(NULL));
-    //array[0]=(rand()%max+1);
     for(i=0;i<n;i++)    //产生n个随机数并储存
     {
         //有问题，会产生相同的数,不能只比较前后两个数，要比较已经获取的所有数

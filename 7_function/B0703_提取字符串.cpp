@@ -43,41 +43,24 @@ int main()
 
 #include<stdio.h>
 #include<string.h>
+#include<ctype.h>
 //从字符串s1中提取小写英文字母与数字组成字符串s2
-void extract(char s1[],char s2[])
-{
+void extract(char s1[],char s2[]){
     int i,j,len;
     len=strlen(s1);
     for(i=0,j=0;i<len;i++)
-    {
-        if(s1[i] >= 'a' && s1[i] <= 'z' || s1[i] >= '0' && s1[i] <= '9')
-        {
+        if(islower(*(s1+i)) || isdigit(*(s1+i)))
             s2[j++]=s1[i];
-        }
-    }
     s2[j]='\0';
 }
 //字符串逆序存放
-void reverse(char str[])
-{
-    int len,i,j=0;
-    char temp[81];
-    len=strlen(str);
-    //把str倒序存放在temp中
-    for(i=len-1;i>=0;i--)
-    {
-        temp[j++]=str[i];
+void reverse(char *str){
+    int i=0, len=strlen(str);
+    while (*(str+i) && i < len/2){
+        char c = *(str+i);
+        *(str+i) = *(str+len-1-i);
+        *(str+len-1-i++) = c;
     }
-    str[i+1]='\0';
-    //把temp中内容放到str中
-    //strcpy(str,temp);     //(这个不行？？)
-    ///*
-    for(i=0;i<len;i++)
-    {
-        str[i]=temp[i];
-    }
-    //*/
-    str[i+1]='\0';
 }
 
 int main()
