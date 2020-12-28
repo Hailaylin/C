@@ -33,12 +33,12 @@ void chooseSort (int *arr , int num)
 void bubbleSort(int *arr, int num){
     int i, j;
     int temp;
-    for (i=0; i<num-1; i++){
-        for (j=0; j<num-i-1; j++){
-            if (*(arr+i)<*(arr+j)){
-                temp = *(arr+i);
-                *(arr+i) = *(arr+j);
-                *(arr+j) = temp;
+    for (i=0; i<num-1; i++){            //趟次
+        for (j=0; j<num-i-1; j++){      //每趟比较次数
+            if (*(arr+j+1)<*(arr+j)){     //在j中比较前后元素
+                temp = *(arr+j);
+                *(arr+j) = *(arr+j+1);
+                *(arr+j+1) = temp;
             }
         }
     }
