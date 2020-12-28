@@ -2,7 +2,7 @@
  * @file my_选择排序.c
  * @author HailayLin (hailay@qq.com)
  * @brief 考试前自己测试
- * @version 0.1 先不用可变参数类型
+ * @version 0.1 先不用可变参数类型，默认升序（从小到大）
  * @date 2020-12-28
  * 
  * @copyright Copyright (c) 2020  Hailay.site & Xihe.ai
