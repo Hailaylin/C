@@ -14,7 +14,7 @@
 int main(){
 	char str[5];
 	int i=0;
-	while((*(str+i++)  = getchar()+4) != '\n' + 4);
+	while((*(str+i++)  = getchar() + 4) != '\n' + 4);
 	*(str+i) = '\0';
 	printf("%s",str);
 	return 0;
