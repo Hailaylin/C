@@ -6,27 +6,15 @@
             "label": "compile",
             "command": "g++",
             "args": [
-                "-g",
-                "TestProgram.cpp",
+                "-g",               //生成调试信息
+                "-Wall",            //允许发出GCC能够提供的所有有用的警告
+                "-std=c++11",
+                "${file}",
                 "-o",
                 "${fileDirname}\\TestProgram.exe"    //编译后文件的地址和文件名.exe
             ],
             "problemMatcher": [
                 "$gcc"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true,
-            },
-            "dependsOn":["changeName"]
-        },
-        {
-            "label": "changeName",
-            "type": "shell",
-            "command": "cp",
-            "args": [
-                "\"${file}\"",
-                "${fileDirname}\\TestProgram.cpp"
             ],
             "group": {
                 "kind": "build",
