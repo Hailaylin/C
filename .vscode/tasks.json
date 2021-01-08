@@ -7,7 +7,7 @@
             "command": "g++",
             "args": [
                 "-g",
-                "${file}",
+                "TestProgram.cpp",
                 "-o",
                 "${fileDirname}\\TestProgram.exe"    //编译后文件的地址和文件名.exe
             ],
@@ -16,8 +16,22 @@
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true
-            }
+                "isDefault": true,
+            },
+            "dependsOn":["changeName"]
+        },
+        {
+            "label": "changeName",
+            "type": "shell",
+            "command": "cp",
+            "args": [
+                "\"${file}\"",
+                "${fileDirname}\\TestProgram.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true,
+            },
         }
     ]
 }

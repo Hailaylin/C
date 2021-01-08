@@ -9,7 +9,7 @@
             "program": "${fileDirname}\\TestProgram.exe",//要调试的可执行程序的地址
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
+            "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
