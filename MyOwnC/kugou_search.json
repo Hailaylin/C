@@ -1,0 +1,44 @@
+{
+    "status": 1,
+    "err_code": 0,
+    "data": {
+        "hash": "80e511bf3d1b43705531c69fd82bc45b",
+        "timelength": 295052,
+        "filesize": 4728834,
+        "audio_name": "\u5343\u9762\u97f3\u84497ZH\u3001\u6d1b\u5929\u4f9d - \u671d\u6c50",
+        "have_album": 1,
+        "album_name": "\u671d\u6c50",
+        "album_id": "15126767",
+        "img": "http:\/\/imge.kugou.com\/stdmusic\/20181006\/20181006040947737807.jpg",
+        "have_mv": 0,
+        "video_id": 0,
+        "author_name": "\u5343\u9762\u97f3\u84497ZH\u3001\u6d1b\u5929\u4f9d",
+        "song_name": "",
+        "lyrics": "",
+        "author_id": "817114",
+        "privilege": 0,
+        "privilege2": "0",
+        "play_url": "",
+        "authors": [
+            {
+                "author_id": "817114",
+                "author_name": "\u5343\u9762\u97f3\u84497ZH",
+                "is_publish": "1",
+                "sizable_avatar": "",
+                "avatar": ""
+            },
+            {
+                "author_id": "88936",
+                "author_name": "\u6d1b\u5929\u4f9d",
+                "is_publish": "1",
+                "sizable_avatar": "http:\/\/singerimg.kugou.com\/uploadpic\/softhead\/{size}\/20200629\/20200629163454629.jpg",
+                "avatar": "http:\/\/singerimg.kugou.com\/uploadpic\/softhead\/400\/20200629\/20200629163454629.jpg"
+            }
+        ],
+        "is_free_part": 0,
+        "bitrate": 128,
+        "recommend_album_id": "15126767",
+        "audio_id": "44898190",
+        "has_privilege": false
+    }
+}

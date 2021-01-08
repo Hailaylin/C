@@ -3,18 +3,18 @@
     "configurations": [
         
         {
-            "name": "C/C++",
+            "name": "g++ 单文件调试运行",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",//要调试的可执行程序的地址
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "D:/Apps/mingw64/bin/gdb.exe",
-            "preLaunchTask": "compile",
+            "miDebuggerPath": "D:\\Apps\\mingw64\\bin\\gdb.exe",        //您的mingw64 gdb.exe目录
+            "preLaunchTask": "compile",                                 //和task.json的lable要保持一致
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
