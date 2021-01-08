@@ -9,7 +9,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"    //编译后文件的地址和文件名.exe
+                "${fileDirname}\\TestProgram.exe"    //编译后文件的地址和文件名.exe
             ],
             "problemMatcher": [
                 "$gcc"

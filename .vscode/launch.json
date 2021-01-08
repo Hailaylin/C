@@ -3,10 +3,10 @@
     "configurations": [
         
         {
-            "name": "g++ 单文件调试运行",
+            "name": "g++ 单文件可中文文件名调试运行",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",//要调试的可执行程序的地址
+            "program": "${fileDirname}\\TestProgram.exe",//要调试的可执行程序的地址
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
