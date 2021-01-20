@@ -1,24 +1,23 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "type": "shell",
-            "label": "compile",
-            "command": "g++",
-            "args": [
-                "-g",               //生成调试信息
-                "-Wall",            //允许发出GCC能够提供的所有有用的警告
-                "${file}",
-                "-o",
-                "${fileDirname}\\TestProgram.exe"    //编译后文件的地址和文件名.exe
-            ],
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true,
-            },
-        }
-    ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "cppbuild",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}.out"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "compiler: /usr/bin/gcc"
+		}
+	]
 }
